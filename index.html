@@ -8,7 +8,6 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 </head>
-<!--<body onload="onLoad()">-->
 <header>
     <div class="collapse bg-dark" id="navbarHeader">
         <div class="container">
@@ -210,8 +209,42 @@
 
 <div class="album py-5 bg-light">
     <div class="container">
-
         <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <div class="card-body">
+                        <p class="card-text">If you step at star shaped field, you play again</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <div class="card-body">
+                        <form method="get" name="myForm">
+                            <p class="card-text">Try to move your rock to the end of the board as quickly as possible</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <div class="card-body">
+                        <p class="card-text">If you stand on star shaped field you cannot be kicked out</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <div class="card-body">
+                        <p class="card-text">Only one piece may be moved per throw of the dice and pieces must always move forward around the track.</p>
+
+                    </div>
+                </div>
+            </div>
             <div class="col-md-4">
                 <div class="card mb-4 box-shadow">
                     <div class="card-body">
@@ -222,29 +255,17 @@
             <div class="col-md-4">
                 <div class="card mb-4 box-shadow">
                     <div class="card-body">
-                        <!--                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to-->
-                        <!--                            additional content. This content is a little bit longer.</p>-->
                         <form method="get" name="myForm">
                             <div class="row ">
-                                Your name <input id="nameInput" type="text" name="fname"><br>
+                                Enter name <input id="nameInput" type="text" name="fname"><br>
                                 <input type="button" onclick="saveName()" value="Save">
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                    <div class="card-body">
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-
-                    </div>
-                </div>
-            </div>
-
-
         </div>
+
     </div>
 </div>
 
@@ -252,7 +273,7 @@
     <br>
     <div class="container">
         <p class="float-right">
-            <a href="#">Back to top</a>
+            <a onclick="scrollUp()" class="text-primary">Back to top</a>
         </p>
         <p>Created By <b>Ondrej Trojan</b>, Czech Technical University in Prague &copy; 2019</p>
         <p>With passion for 4600 years old ancient game Ur </p>
@@ -266,6 +287,4 @@
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
-<!--<script src="https://code.jquery.com/jquery-1.10.2.js"></script>-->
-<!--<script src="js/jquery-3.4.1.js"></script>-->
 </html>

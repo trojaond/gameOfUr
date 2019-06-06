@@ -193,6 +193,9 @@ document.addEventListener('keydown', (event) => {
     }
 }, false);
 
+function scrollUp(){
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
 
 //ONLINE OFFLINE
 window.addEventListener("offline", () => {
@@ -322,7 +325,7 @@ function changeLogoBackground() {
     }
 }
 
-addEventListener('load', function () {
+// addEventListener('load', function () {
     history.pushState(null, null, null);
     addEventListener('popstate', function () {
         let stayOnPage = confirm("If you leave game in progress you will lost all data. Are you sure you want to leave?");
@@ -332,7 +335,7 @@ addEventListener('load', function () {
             history.back()
         }
     });
-});
+// });
 
 
 // GAME LOGIC
