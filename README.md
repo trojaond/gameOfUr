@@ -1,15 +1,9 @@
-## Welcome to GitHub Pages
+## GAME OF UR
+This game is written in javascript and bring you gameplay of one of the oldest games ever discovered.
 
-You can use the [editor on GitHub](https://github.com/trojaond/gameOfUr/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### Warning
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
+Thanks to the use of experimantal sleek funcionality for javascript class (private and public field acess) which is supported by Chrome only, for now it is not possible to play this game on any other browser.
 
 # Header 1
 ## Header 2
