@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game of Ur</title>
+    <link rel="shortcut icon" href="gameOfUr.ico"/>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<!--<body onload="onLoad()">-->
+<header>
+    <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-md-7 py-4">
+                    <h4 class="text-white">About</h4>
+                    <p class="text-muted">The Royal Game of Ur, also known as the Game of Twenty Squares, is a
+                        two-player strategy race board game that was first played in ancient
+                        Mesopotamia during the early <b>3000 BC</b>. The Game of Ur remained popular until
+                        late antiquity, when it stopped being played, possibly evolving into, or being displaced by, an
+                        early form of backgammon. It was eventually forgotten everywhere except among the Jewish
+                        population of the Indian city of Kochi, who continued playing a version of it until the 1950s
+                        when they began emigrating to Israel.</p>
+                </div>
+                <div class="col-sm-4offset-md-1 py-4">
+                    <h4 class="text-white">Rules</h4>
+                    <ul class="list-unstyled">
+                        <li><img src="img/wiki.svg " height="26" width="26"/> <a
+                                href="https://en.wikipedia.org/wiki/Royal_Game_of_Ur#Basic_rules" class="text-white">Written
+                            rules</a>
+                        </li>
+                        <li><img src="img/youtube.svg" height="26" width="26"/> <a href="https://youtu.be/WZskjLq040I"
+                                                                                   class="text-white">Gameplay</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-white text-left" id="nameSlot"></div>
+            <div class="text-white text-right">TIP: Number of white top of rocks bellow indicate how many steps you
+                can move.
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <div class="logo d-flex ">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 640" width="40" height="40">
+                        <defs>
+                            <path d="M570 334.69C570 472.67 457.98 584.69 320 584.69C182.02 584.69 70 472.67 70 334.69C70 196.72 182.02 84.69 320 84.69C457.98 84.69 570 196.72 570 334.69Z"
+                                  id="atllvs7g"></path>
+                            <path d="M357.69 333.16C357.69 354.71 339.54 372.2 317.18 372.2C294.83 372.2 276.68 354.71 276.68 333.16C276.68 311.62 294.83 294.13 317.18 294.13C339.54 294.13 357.69 311.62 357.69 333.16Z"
+                                  id="b1ao0HkkYa"></path>
+                            <path d="M263.6 239.26C263.6 260.81 245.45 278.3 223.1 278.3C200.74 278.3 182.59 260.81 182.59 239.26C182.59 217.72 200.74 200.23 223.1 200.23C245.45 200.23 263.6 217.72 263.6 239.26Z"
+                                  id="d71RXGkYME"></path>
+                            <path d="M452.99 431.6C452.99 453.14 434.84 470.63 412.48 470.63C390.13 470.63 371.98 453.14 371.98 431.6C371.98 410.05 390.13 392.56 412.48 392.56C434.84 392.56 452.99 410.05 452.99 431.6Z"
+                                  id="a2e3yNm9oL"></path>
+                            <path d="M457.41 237.79C457.41 259.33 439.26 276.82 416.9 276.82C394.55 276.82 376.4 259.33 376.4 237.79C376.4 216.25 394.55 198.76 416.9 198.76C439.26 198.76 457.41 216.25 457.41 237.79Z"
+                                  id="d1TfwVXqD0"></path>
+                            <path d="M263.6 430.12C263.6 451.67 245.45 469.16 223.1 469.16C200.74 469.16 182.59 451.67 182.59 430.12C182.59 408.58 200.74 391.09 223.1 391.09C245.45 391.09 263.6 408.58 263.6 430.12Z"
+                                  id="d8acnzOTKO"></path>
+                        </defs>
+                        <g>
+                            <g>
+                                <g>
+                                    <g>
+                                        <use id="svgLogo" xlink:href="#atllvs7g" opacity="1" fill="#202020" fill-opacity="1"></use>
+                                        <g>
+                                            <use xlink:href="#atllvs7g" opacity="1" fill-opacity="0" stroke="#000000"
+                                                 stroke-width="0" stroke-opacity="1"></use>
+                                        </g>
+                                    </g>
+                                    <g>
+                                        <use xlink:href="#b1ao0HkkYa" opacity="1" fill="#ffffff" fill-opacity="1"></use>
+                                        <g>
+                                            <use xlink:href="#b1ao0HkkYa" opacity="1" fill-opacity="0" stroke="#ffffff"
+                                                 stroke-width="0" stroke-opacity="1"></use>
+                                        </g>
+                                    </g>
+                                    <g>
+                                        <use xlink:href="#d71RXGkYME" opacity="1" fill="#ffffff" fill-opacity="1"></use>
+                                        <g>
+                                            <use xlink:href="#d71RXGkYME" opacity="1" fill-opacity="0" stroke="#ffffff"
+                                                 stroke-width="0" stroke-opacity="1"></use>
+                                        </g>
+                                    </g>
+                                    <g>
+                                        <use xlink:href="#a2e3yNm9oL" opacity="1" fill="#ffffff" fill-opacity="1"></use>
+                                        <g>
+                                            <use xlink:href="#a2e3yNm9oL" opacity="1" fill-opacity="0" stroke="#ffffff"
+                                                 stroke-width="0" stroke-opacity="1"></use>
+                                        </g>
+                                    </g>
+                                    <g>
+                                        <use xlink:href="#d1TfwVXqD0" opacity="1" fill="#ffffff" fill-opacity="1"></use>
+                                        <g>
+                                            <use xlink:href="#d1TfwVXqD0" opacity="1" fill-opacity="0" stroke="#ffffff"
+                                                 stroke-width="0" stroke-opacity="1"></use>
+                                        </g>
+                                    </g>
+                                    <g>
+                                        <use xlink:href="#d8acnzOTKO" opacity="1" fill="#ffffff" fill-opacity="1"></use>
+                                        <g>
+                                            <use xlink:href="#d8acnzOTKO" opacity="1" fill-opacity="0" stroke="#ffffff"
+                                                 stroke-width="0" stroke-opacity="1"></use>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <div>
+                    <strong>Royal Game of Ur</strong>
+                </div>
+            </a>
+            <div class="text-light">
+                Turn:
+                <b class="text-black" id="turnText">BLACK</b>
+            </div>
+            <div class="row">
+
+                <div id="r1" class="rock1"></div>
+                <div id="r2" class="rock2"></div>
+                <div id="r3" class="rock3"></div>
+                <div id="r4" class="rock4"></div>
+                <button type="button" class="btn btn-primary" id="spinButton" onclick="spin()">
+                    Spin
+                </button>
+
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<div class="wrap">
+
+    <p id="notificationText" class="text-center">INITIAL TEXT</p>
+
+    <div class="row">
+        <div id="whiteStack" class="col whiteStack">
+            <span class="dot white" draggable="false"></span>
+            <span class="dot white" draggable="false"></span>
+            <span class="dot white" draggable="false"></span>
+            <span class="dot white" draggable="false"></span>
+            <span class="dot white" draggable="false"></span>
+            <span class="dot white" draggable="false"></span>
+            <span class="dot white" draggable="false"></span>
+
+        </div>
+        <div class=""></div>
+        <div id="whiteFin" class="col whiteFin">
+        </div>
+    </div>
+
+
+    <br>
+
+    <div class="grid">
+        <div id="w3" class="square star"></div>
+        <div id="w2" class="square eye"></div>
+        <div id="w1" class="square five"></div>
+        <div id="w0" class="square eye"></div>
+        <div class="square hidden"></div>
+        <div class="square hidden"></div>
+        <div id="w13" class="square star"></div>
+        <div id="w12" class="square fiveSquare"></div>
+
+        <div id="c4" class="square sq"></div>
+        <div id="c5" class="square five "></div>
+        <div id="c6" class="square forFive"></div>
+        <div id="c7" class="square star"></div>
+        <div id="c8" class="square five"></div>
+        <div id="c9" class="square forFive"></div>
+        <div id="c10" class="square eye"></div>
+        <div id="c11" class="square five"></div>
+
+        <div id="b3" class="square star"></div>
+        <div id="b2" class="square eye"></div>
+        <div id="b1" class="square five"></div>
+        <div id="b0" class="square eye"></div>
+        <div class="square hidden"></div>
+        <div class="square hidden"></div>
+        <div id="b13" class="square star">
+            <!--            <span class="dot black" draggable="false"></span>-->
+        </div>
+        <div id="b12" class="square fiveSquare"></div>
+    </div>
+    <br>
+    <div class="row">
+        <div id="blackStack" class="blackStack col">
+            <span class="dot black" draggable="false"></span>
+            <span class="dot black" draggable="false"></span>
+            <span class="dot black" draggable="false"></span>
+            <span class="dot black" draggable="false"></span>
+            <span class="dot black" draggable="false"></span>
+            <span class="dot black" draggable="false"></span>
+            <span class="dot black" draggable="false"></span>
+        </div>
+        <div class=""></div>
+        <div id="blackFin" class="blackFin col">
+        </div>
+    </div>
+</div>
+
+<div class="album py-5 bg-light">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <div class="card-body">
+                        <p class="card-text">Use SPACE bar to spin dices</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <div class="card-body">
+                        <!--                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to-->
+                        <!--                            additional content. This content is a little bit longer.</p>-->
+                        <form method="get" name="myForm">
+                            <div class="row ">
+                                Your name <input id="nameInput" type="text" name="fname"><br>
+                                <input type="button" onclick="saveName()" value="Save">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<footer class="text-muted">
+    <br>
+    <div class="container">
+        <p class="float-right">
+            <a href="#">Back to top</a>
+        </p>
+        <p>Created By <b>Ondrej Trojan</b>, Czech Technical University in Prague &copy; 2019</p>
+        <p>With passion for 4600 years old ancient game Ur </p>
+    </div>
+</footer>
+
+</body>
+<script src="js/script.js"></script>
+<script src="js/rock.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+<!--<script src="https://code.jquery.com/jquery-1.10.2.js"></script>-->
+<!--<script src="js/jquery-3.4.1.js"></script>-->
+</html>

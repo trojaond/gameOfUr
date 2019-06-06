@@ -1,0 +1,289 @@
+
+.logo {
+    animation: rotation 2s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+.grid::before {
+    content: '';
+    padding-bottom: 100%;
+    -ms-grid-row: 1;
+    grid-row: 1 / 1;
+    -ms-grid-column: 1;
+    grid-column: 1 / 1;
+}
+
+.grid > .square:first-child {
+    -ms-grid-row: 1;
+    grid-row: 1 / 1;
+    -ms-grid-column: 1;
+    grid-column: 1 / 1;
+}
+
+.grid > .square {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px grey solid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.grid > .square.hidden {
+    background: transparent;
+    border: 0px;
+}
+
+.grid > .square > .dot {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.wrap {
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+}
+
+
+.rock {
+    /*height: 150px;*/
+    /*width: 150px;*/
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.dot {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    margin: -10px;
+
+}
+
+.white {
+    background: url(../img/whiteRock.svg);
+}
+
+.black {
+    background: url(../img/blackRock.svg);
+}
+
+.hold {
+}
+
+
+/*Menu*/
+.text-black {
+    color: black;
+}
+
+/*Board*/
+.grid > .square {
+    -webkit-box-shadow: 0px 0px 0px 0px #ffde83;
+    box-shadow: 0px 0px 0px 0px #ffde83;
+    -webkit-transition: -webkit-box-shadow 0.3s linear;
+    transition: -webkit-box-shadow 0.3s linear;
+    -o-transition: box-shadow 0.3s linear;
+    transition: box-shadow 0.3s linear;
+    transition: box-shadow 0.3s linear, -webkit-box-shadow 0.3s linear;
+    margin: 0px;
+}
+
+
+@media (max-width: 1369px) {
+
+    .grid > .square.star {
+        background: url(../img/star.svg);
+        background-size: cover;
+
+    }
+
+    .grid > .square.five {
+        background: url(../img/5.svg);
+        background-size: cover;
+    }
+
+    .grid > .square.eye {
+        background: url(../img/eye.svg);
+        background-size: cover;
+    }
+
+    .grid > .square.sq {
+        background: url(../img/square.svg);
+        background-size: cover;
+    }
+
+    .grid > .square.forFive {
+        background: url(../img/4-5.svg);
+        background-size: cover;
+    }
+
+    .grid > .square.fiveSquare {
+        background: url(../img/fivesquare.svg);
+        background-size: cover;
+    }
+
+    .grid {
+        margin: auto;
+        display: -ms-grid;
+        display: grid;
+        grid-template-columns: repeat(8, 100px);
+        grid-auto-rows: 1fr;
+    }
+}
+
+@media (min-width: 1367px) {
+
+    .grid > .square.star {
+        background: url(../img/star.svg);
+    }
+
+    .grid > .square.five {
+        background: url(../img/5.svg);
+    }
+
+    .grid > .square.eye {
+        background: url(../img/eye.svg);
+    }
+
+    .grid > .square.sq {
+        background: url(../img/square.svg);
+    }
+
+    .grid > .square.forFive {
+        background: url(../img/4-5.svg);
+    }
+
+    .grid > .square.fiveSquare {
+        background: url(../img/fivesquare.svg);
+    }
+
+    .grid {
+        margin: auto;
+        display: -ms-grid;
+        display: grid;
+        grid-template-columns: repeat(8, 150px);
+        grid-auto-rows: 1fr;
+    }
+}
+
+
+/* END- Board*/
+
+
+/*Rocks*/
+.rock1 {
+    width: 50px;
+    height: 50px;
+    background: url(../img/rock1.svg);
+}
+
+.rock1Pos {
+    width: 50px;
+    height: 50px;
+    background: url(../img/rock1Pos.svg);
+}
+
+.rock2 {
+    width: 50px;
+    height: 50px;
+    background: url(../img/rock2.svg);
+}
+
+.rock2Pos {
+    width: 50px;
+    height: 50px;
+    background: url(../img/rock2Pos.svg);
+}
+
+.rock3 {
+    width: 50px;
+    height: 50px;
+    background: url(../img/rock3.svg);
+}
+
+.rock3Pos {
+    width: 50px;
+    height: 50px;
+    background: url(../img/rock3Pos.svg);
+}
+
+.rock4 {
+    width: 50px;
+    height: 50px;
+    background: url(../img/rock4.svg);
+}
+
+.rock4Pos {
+    width: 50px;
+    height: 50px;
+    background: url(../img/rock4Pos.svg);
+}
+
+
+/* Drag and Drop*/
+.grid > .square.home {
+    -webkit-box-shadow: 0px 0px 5px 5px #007bff;
+    box-shadow: 0px 0px 5px 5px #007bff;
+}
+
+.grid > .square.unreachable {
+    -webkit-box-shadow: 0px 0px 5px 5px #a71d2a;
+    box-shadow: 0px 0px 5px 5px #a71d2a;
+}
+
+.grid > .square.target {
+    -webkit-box-shadow: 0px 0px 5px 5px yellow;
+    box-shadow: 0px 0px 5px 5px yellow;
+}
+
+.invisible {
+    display: none;
+}
+
+.target {
+    -webkit-box-shadow: 0px 0px 50px 5px yellow,
+    inset 0px 0px 50px yellow;
+    box-shadow: 0px 0px 50px 5px yellow,
+    inset 0px 0px 50px yellow;
+}
+
+.empty {
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    /*margin: 10px;*/
+    border: solid 3px salmon;
+    background: white;
+}
+
+/* END Drag and Drop*/
+
